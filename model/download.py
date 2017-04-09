@@ -24,6 +24,7 @@ from threading import Thread
 def generate_path(path_list: list) -> str:
     return_path = ""
     for path in path_list:
+        path = path = re.sub('[\t]', '', path)
         return_path = os.path.join(return_path, path)
     return return_path
 
